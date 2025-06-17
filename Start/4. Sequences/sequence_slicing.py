@@ -6,22 +6,31 @@ from collections import deque
 names = ["Jim", "Pam", "Creed", "Michael", "Dwight", "Oscar", "Kevin", "Phyllis"]
 
 # a slice is a subset of a sequence. The form is [start:stop:step]
-
+# print(names[1:4])
 
 # using a step 
-
+# print(names[0:7:2])
 
 # shorthand
-
+# print(names[:3])
+# print(names[5:])
 
 # reversing with step of -1
-
+# print(names[::-1])
 
 # assigning sequences
-
+# newnames = ["Andy", "Stanely", "Angela"]
+# names[2:4] = newnames
+# print(names)
 
 # the del operator works with slices
-
+# del names[0:2]
+# print(names)
 
 # not all sequence types support slicing, however
 deque_names = deque(["Jim", "Pam", "Creed", "Michael", "Dwight", "Oscar", "Kevin", "Phyllis"])
+for name in deque_names:
+  print(name, " ", end="")
+print()
+print(len(deque_names))
+# print(depue_names[0:4]) Cannot slice deque as elements can be add/remove both ends
